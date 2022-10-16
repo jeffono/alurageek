@@ -1,0 +1,14 @@
+:root {
+  --color-main: #2a7ae4;
+  --color-mainlight: #5595e9;
+  --color-mainalt: #d4e4fa;
+  --color-mainneg: #fff;
+  --color-text: #464646;
+  --color-textalt: #a2a2a2;
+  --color-bgmain: #f5f5f5;
+  --color-bgalt: #eaf2fd;
+  --color-inputborder: #c8c8c8;
+  --padding-main: 1.6rem;
+  --padding-large: 3.2rem;
+  --maxwidth-desktop: 120rem;
+}
