@@ -1,0 +1,21 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.button {
+  background-color: var(--color-main);
+  color: var(--color-mainneg);
+  padding: 1.2rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}

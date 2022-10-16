@@ -1,0 +1,22 @@
+* {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+html {
+  background: url("/_reference/home-mobile.png") no-repeat center top !important;
+  min-height: 100vh;
+}
+body {
+  min-height: 100vh;
+  background-color: rgba(255,255,255,0.6);
+}
+@media screen and (min-width: 768px) {
+  html {
+    background: url("/_reference/home-tablet.png") no-repeat center top !important;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html {
+    background: url("/_reference/home-desktop.png") no-repeat center top !important;
+  }
+}

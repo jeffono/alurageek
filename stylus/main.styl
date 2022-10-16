@@ -1,0 +1,439 @@
+@require "normalize"
+@require "variables"
+// @require "reference" // Just for layout reference, remove for production
+@require "base-type"
+
+// === MAIN HEADER === //
+.mainheader
+  background var(--color-mainneg)
+
+// === MAIN NAV === //
+.mainnav
+  align-items stretch
+  display flex
+  font-size 1.4rem
+  min-height clamp(7.2rem,10vw,11.5rem)
+  justify-content space-between
+  position relative
+  max-width var(--maxwidth-desktop)
+  margin-inline auto
+
+.mainnav-logo,
+.mainnav-searchicon
+  display flex
+  padding-inline var(--padding-main)
+
+.mainnav-logo
+  background-color transparent
+  transition background-color 0.2s ease-in-out
+
+.mainnav-logo:hover,
+.mainnav-logo:focus
+  background-color var(--color-mainalt)
+  outline none
+
+.mainnav-logo img
+  align-self center
+  width clamp(10rem,13vw,17.6rem)
+
+.mainnav-login
+  align-self center
+  flex-grow 2
+  max-width 10rem
+  margin-left auto
+
+// === SEARCH === //
+.search
+  display none
+  align-items center
+  // position relative
+  // margin-inline var(--padding-large)
+  position absolute
+  top 100%
+  left 0
+  width 100%
+  padding var(--padding-main)
+  padding-top 0
+  background-color var(--color-mainneg)
+  box-shadow 0 15px 10px hsla(0,0,0,0.8)
+
+// Custom styling checkbox. Ref: https://moderncss.dev/pure-css-custom-checkbox-style/
+.mainnav-showsearch
+  order 2
+  background-color transparent
+  appearance none
+  position relative
+
+.mainnav-showsearch:after
+  content 'search'
+  font-family 'Material Symbols Outlined'
+  font-size 2.5rem
+  display flex
+  justify-content center
+  align-items center
+  height 100%
+  min-width 6rem
+
+.mainnav-searchicon
+  order 3
+  display none
+
+.mainnav-showsearch:checked:after
+  color var(--color-main)
+  content 'search_off'
+
+// Responsive mobile searchbox. Ref: https://dev.to/codingnepal/responsive-dropdown-menu-bar-with-search-field-using-only-html-css-1iao
+.mainnav-showsearch:checked ~ .search
+  display flex
+
+.mainnav-searchicon img
+  width 2.5rem
+
+.search-fieldinput
+  border none
+  border 1px solid transparent
+  background-color var(--color-bgmain)
+  font-size 1.4rem
+  height 4rem
+  width clamp(27rem,28vw,39rem)
+  border-radius 2rem
+  padding .8rem 5rem .8rem 1.6rem
+  transition background-color 0.2s ease-in-out, border-color 0.2s ease-in-out
+  width 100%
+
+.search-fieldinput:focus
+  background-color var(--color-mainneg)
+  border-color var(--color-main)
+  outline none
+
+.search-fieldinput::placeholder
+  color var(--color-textalt)
+
+.search-button
+  border none
+  position absolute
+  right 0
+  height 4rem
+  width 5rem
+  background transparent
+  right 1.5rem
+
+// === HOME - HERO === //
+.hero
+  background linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url("../images/hero.jpg") no-repeat center / cover
+  margin-inline 0
+  max-width 100%
+  color var(--color-mainneg)
+  padding 0
+
+.hero-box
+  align-items start
+  display flex
+  flex-direction column
+  justify-content flex-end
+  min-height clamp(16rem, 37vw, 29rem)
+  max-width var(--maxwidth-desktop)
+  margin 0 auto
+  padding clamp(var(--padding-main),5vw,var(--padding-large))
+
+.hero-title
+  font-size clamp(2.2rem,7vw,5rem)
+  margin-block 0 1rem
+  text-shadow 2px 2px 4px rgba(0, 0, 0, 0.5)
+
+.hero-text
+  font-size clamp(1.4rem,3vw,2.2rem)
+  font-weight 600
+  margin-block 0 .8rem
+  text-shadow 1px 1px 3px rgba(0, 0, 0, 0.5)
+
+// === PRODUCTS === //
+.productswrapper
+  // margin-inline auto
+  // padding-inline var(--padding-main)
+  // padding-inline clamp(var(--padding-main),5vw,var(--padding-large))
+  // max-width var(--maxwidth-desktop)
+
+.products
+  // padding-inline 0
+  margin-inline auto
+
+.products-header
+  display flex
+  justify-content space-between
+  align-items stretch
+  margin-bottom 1.7rem
+
+.products-title
+  color var(--color-text)
+  font-size 2.2rem
+  font-size clamp(2.2rem,2.5vw,3.2rem)
+  margin 0
+
+.products-link,
+.products-link:visited
+  align-items center
+  color var(--color-main)
+  display flex
+  font-size 1.4rem
+  font-size clamp(1.4rem,2.5vw,1.6rem)
+  font-weight 700
+  padding-inline-start .5rem
+  margin-inline-start 1.5rem
+  background-color transparent
+  transition background-color 0.2s ease-in-out, color 0.2s ease-in-out
+  white-space nowrap
+
+.products-link .material-symbols-outlined
+  // margin-left 0.6em
+  font-size 1.2em
+
+.products-link:hover,
+.products-link:focus
+  background-color var(--color-main)
+  color var(--color-mainneg)
+
+.products-list
+  list-style none
+  padding 0
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(130px,1fr))
+  gap 1.6rem
+  margin 0
+
+.products-item
+  display block
+
+.products-item:nth-of-type(5),
+.products-item:nth-of-type(6)
+  display none
+
+.products-itemlink
+  display flex
+  flex-direction column
+  height 100%
+  color var(--color-text)
+  background-color transparent
+  transition background-color 0.2s ease-in-out, transform 0.2s ease-in-out
+
+.products-itemlink:hover,
+.products-itemlink:focus  
+  background-color var(--color-mainneg)
+  transform scale(1.05)
+  outline none
+
+.products-itemlink img
+  display block
+  aspect-ratio 1
+  object-fit cover
+  width 100%
+
+.products-itemname
+  font-size 1.4rem
+  font-weight 500
+  margin-block 0.8rem 0.4rem
+
+.products-itemprice
+  font-size 1.6rem
+  font-weight 700
+  margin-block 0.8rem 0.4rem
+  margin-top auto
+
+.products-actiontxt
+  font-size 1.4rem
+  font-weight 700
+  margin 0
+  color var(--color-main)
+
+// ===  FOOTER === //
+.mainfooter
+  background-color var(--color-bgalt)
+
+.mainfooter-box
+  max-width var(--maxwidth-desktop)
+  margin-inline auto
+  display flex
+  flex-direction column
+  padding-inline clamp(var(--padding-main),5vw,var(--padding-large))
+
+// === ABOUT === //
+.about
+  margin-inline 0
+  text-align center
+  display flex
+  flex-direction column
+  align-items center
+  padding-inline 0
+
+.about-list
+  list-style none
+  padding 0
+  margin 0
+  font-size 1.6rem
+  font-weight 500
+
+.about-item a
+  display inline-block
+  padding 0.8rem 0
+  position relative
+
+.about-item a:after
+  content ''
+  position absolute
+  height 2px
+  width 100%
+  bottom .8rem
+  left 0
+  background-color var(--color-main)
+  transform scaleX(0)
+  transition transform 0.1s ease-in-out
+
+.about-item a:hover,
+.about-item a:focus
+  color var(--color-main)
+  outline none
+
+.about-item a:hover:after,
+.about-item a:focus:after
+  transform scaleX(1)
+
+// === CONTACT === //
+.contact
+  padding-top 0
+  margin-inline 0
+  padding-inline 0
+
+.contact-title
+  font-size 1.6rem
+  margin-block 0.6rem
+
+// === FORMS === //
+.form-field
+  position relative
+  padding 3.2rem 1.2rem 0.8rem 1.2rem
+  border-bottom 1px solid var(--color-inputborder)
+  display flex
+  flex-direction column
+  margin-bottom 2rem
+  background-color var(--color-mainneg)
+  transition all 0.2s ease-in-out;
+  border-radius 4px
+
+.form-label
+  font-size 1.6rem
+  font-weight 400
+  color var(--color-textalt)
+  padding-top 1.5rem
+  position absolute
+  top 1.8rem
+  transition all 0.2s ease-in-out;
+
+.form-fieldinput,
+.form-fieldinput:focus
+  outline none
+  color var(--color-text)
+  border none
+  background transparent
+  font-size 1.6rem
+  font-weight 400
+  padding 0
+  display block
+  width 100%
+
+.form-field:focus-within .form-label,
+.form-fieldinput:not(:placeholder-shown) + .form-label
+  top 0
+  font-size 1.2rem
+
+.form-field:focus-within
+  box-shadow 0 4px 0 var(--color-inputborder)
+
+.contact-msg
+  margin-bottom 1rem
+
+// === COPYRIGHT === //
+.copyright
+  background-color var(--color-mainneg)
+  text-align center
+  font-size 1.6rem
+  line-height 1.9rem
+  max-width 100%
+
+
+// ======================//
+// === MEDIA QUERIES === //
+// ======================//
+@media screen and (min-width: 640px)
+  section
+    padding var(--padding-large)
+
+  .mainnav
+    justify-content flex-start
+
+  .mainnav-logo
+    padding-inline 0
+
+  .mainnav
+    padding-inline var(--padding-large)
+
+  .mainnav-showsearch
+    display none
+  
+  .mainnav-login
+    max-width 13rem
+    margin-left auto
+  
+  .search
+    display flex
+    position relative
+    width auto
+    padding var(--padding-main)
+    padding-inline-start clamp(var(--padding-main),3vw,var(--padding-large))
+    box-shadow none
+
+  .search-fieldinput
+    min-width clamp(27rem,40vw,40rem)
+
+  .mainfooter-box
+    flex-direction row
+    justify-content stretch
+  
+  .about
+    text-align left
+    align-items flex-start
+    margin-inline 0
+
+  .about-list
+    min-width 26.5rem
+  
+  .about-item a
+    padding 1.2rem 0
+
+  .contact
+    padding-top clamp(var(--padding-main),5vw,var(--padding-large))
+    padding-inline 0
+    width 100%
+
+
+@media screen and (min-width: 1140px)
+  .hero
+    margin-bottom max(2vw,2.8rem)
+
+  .products-item:nth-of-type(5),
+  .products-item:nth-of-type(6)
+    display block
+
+  .mainfooter
+    margin-top max(5vw,6.4rem)
+
+  .mainfooter-box
+    column-gap 5rem
+
+  .about
+    flex-direction row
+    align-items flex-start
+    column-gap 11rem
+    padding-inline 0
+
+  .about-list
+    width max-content

@@ -1,0 +1,145 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title AluraGeek
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0" />
+    link(rel="stylesheet", href="css/main.css")
+  body
+    include includes/header.pug
+    main
+      section.hero
+        .hero-box
+          h1.hero-title Dezembro Promocional
+          p.hero-text Produtos selecionados com 33% de desconto
+          a(href="#").hero-button.button Ver Consoles
+      .productswrapper
+        section.products
+          header.products-header
+            h2.products-title Star Wars
+            a(href="#").products-link Ver tudo #[span.material-symbols-outlined arrow_forward]
+          ul.products-list
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_6FDXGY9J6y4.jpg", alt="Caneca Stormtrooper")
+                h3.products-itemname Produto XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_epRFE_hBNjo.jpg", alt="Lego Darth Vader")
+                h3.products-itemname Produto XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_KeGToDVN0l4.jpg", alt="Figure Mestre Yoda")
+                h3.products-itemname Produto XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_4OHkK555s1A.jpg", alt="Figure Stormtrooper")
+                h3.products-itemname Produto XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_R8L1l9RN198.jpg", alt="Figure Baby Yoda")
+                h3.products-itemname Produto XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_1VV1MRafd7A.jpg", alt="Figure Kylo Ren")
+                h3.products-itemname Produto XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+        section.products
+          header.products-header
+            h2.products-title Consoles
+            a(href="#").products-link Ver tudo #[span.material-symbols-outlined arrow_forward]
+          ul.products-list
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_0POwK6iAiRQ.jpg", alt="Controle Xbox one")
+                h3.products-itemname Controle XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_caNzzoxls8Q.jpg", alt="Playstation 5")
+                h3.products-itemname Controle e console XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_ZV7lnfyQLmA.jpg", alt="Console NES Retro")
+                h3.products-itemname Console XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_wa5z9o9fgjw.jpg", alt="Joycon Switch")
+                h3.products-itemname Controle XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_Zjn4dT993-g.jpg", alt="XBox Series X")
+                h3.products-itemname Console XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_k-xYhI3-gJM.jpg", alt="Game Boy")
+                h3.products-itemname Controle XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+        section.products
+          header.products-header
+            h2.products-title Camisetas e produtos diversos
+            a(href="#").products-link Ver tudo #[span.material-symbols-outlined arrow_forward]
+          ul.products-list
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_fMP-oCze3AY.jpg", alt="Camiseta Atari")
+                h3.products-itemname Camisa Atari
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_bUgaIaZysH0.jpg", alt="Camiseta controle NES")
+                h3.products-itemname Camisa SNES
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_sYVY_ZKwaxU.jpg", alt="Figure Sonic")
+                h3.products-itemname Controle e console XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_jMT6BrgBuXU.jpg", alt="Rádio relógio pink")
+                h3.products-itemname Rádio relógio pink retrô com Alexa e Gooogle assistente integradas
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_MxVkWPiJALs.jpg", alt="Headset VR")
+                h3.products-itemname 
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+            li.products-item
+              a(href="#").products-itemlink
+                img(src="images/unsplash_r27umXAelDc.jpg", alt="Pikachu gigante")
+                h3.products-itemname Controle e console XYZ
+                p.products-itemprice R$ 60,00
+                p.products-actiontxt Ver produto
+      include includes/footer.pug

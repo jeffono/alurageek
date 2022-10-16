@@ -1,0 +1,29 @@
+footer.mainfooter
+  div.mainfooter-box
+    section.about
+      img(src="images/alurageek-logo.svg", alt="Logo AluraGeek").about-logo
+      ul.about-list
+        li.about-item 
+          a(href="#") Quem somos nós
+        li.about-item 
+          a(href="#") Política de privacidade
+        li.about-item 
+          a(href="#") Programa fidelidade
+        li.about-item 
+          a(href="#") Nossas lojas
+        li.about-item 
+          a(href="#") Quero ser franqueado
+        li.about-item 
+          a(href="#") Anuncie aqui
+    section.contact
+      h2.contact-title Fale conosco
+      form.form
+        div.contact-name.form-field
+          input#name(type="text", placeholder=" ").form-fieldinput
+          label(for="name").contact-label.form-label Nome
+        div.contact-msg.form-field
+          label(for="message").form-label Escreva sua mensagem
+          textarea#message(cols="30", rows="4").form-fieldinput
+        button(type="submit").button Enviar mensagem
+  section.copyright
+    p.copyright-text Desenvolvido por Jeff Ono #[br] 2022
