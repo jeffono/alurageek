@@ -210,6 +210,10 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   background-color: var(--color-bgmain);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 section {
   padding: clamp(var(--padding-main), 5vw, var(--padding-large));
@@ -476,6 +480,18 @@ a:visited {
   margin: 0;
   color: var(--color-main);
 }
+.login {
+  max-width: 49rem;
+}
+.login-title {
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
+  text-align: center;
+}
+.login-button {
+  min-width: 11rem;
+  max-width: 100%;
+  margin-inline: auto;
+}
 .mainfooter {
   background-color: var(--color-bgalt);
 }
@@ -659,5 +675,8 @@ a:visited {
   }
   .about-list {
     width: max-content;
+  }
+  .login-button {
+    width: 100%;
   }
 }
