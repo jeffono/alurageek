@@ -208,7 +208,8 @@
 .products-item:nth-of-type(6)
   display none
 
-.products-itemlink
+.products-itemlink,
+.products-itembox
   position relative
   display flex
   flex-direction column
@@ -272,10 +273,29 @@
   color var(--color-mainneg)
   padding 0.5rem
   text-shadow 1px 1px 4px hsla(0, 0, 0, 0.5)
+  transition transform 0.2s ease-in-out, color 0.2s ease-in-out
+  outline none
+
+.products-manage a:hover,
+.products-manage a:focus
+  color var(--color-mainlight)
+  transform scale(1.2)
+
+.products-manage a:active
+  transform translate(0, 3px) scale(1.2)
+
+.products-code
+  font-size 1.4rem
+  margin-block 0.8rem
+  font-variant-numeric lining-nums
+  white-space no-break
+  overflow hidden
+  text-overflow ellipsis
 
 // ===  FOOTER === //
 .mainfooter
   background-color var(--color-bgalt)
+  margin-top clamp(3.2rem,5vw,6.4rem)
 
 .mainfooter-box
   max-width var(--maxwidth-desktop)
@@ -450,9 +470,6 @@
   .products-item:nth-of-type(5),
   .products-item:nth-of-type(6)
     display block
-
-  .mainfooter
-    margin-top max(5vw,6.4rem)
 
   .mainfooter-box
     column-gap 5rem
