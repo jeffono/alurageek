@@ -13,7 +13,15 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: stretch;
+}
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+main {
+  flex-grow: 1;
 }
 section {
   padding: clamp(var(--padding-main), 5vw, var(--padding-large));

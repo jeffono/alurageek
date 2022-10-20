@@ -213,7 +213,15 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: stretch;
+}
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+main {
+  flex-grow: 1;
 }
 section {
   padding: clamp(var(--padding-main), 5vw, var(--padding-large));
@@ -312,7 +320,7 @@ a:visited {
 }
 .mainnav-showsearch:after {
   content: 'search';
-  font-family: 'Material Symbols Outlined';
+  font-family: 'Material Icons';
   font-size: 2.5rem;
   display: flex;
   justify-content: center;
@@ -420,7 +428,8 @@ a:visited {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   white-space: nowrap;
 }
-.products-link .material-symbols-outlined {
+.products-link .material-icons {
+  margin-left: 0.1em;
   font-size: 1.2em;
 }
 .products-link:hover,
@@ -444,6 +453,7 @@ a:visited {
   display: none;
 }
 .products-itemlink {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -491,6 +501,19 @@ a:visited {
   min-width: 11rem;
   max-width: 100%;
   margin-inline: auto;
+}
+.products-manage {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.products-manage a {
+  font-family: 'Material Icons';
+  font-size: 2.5rem;
+  color: var(--color-mainneg);
+  padding: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 .mainfooter {
   background-color: var(--color-bgalt);
