@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body
+    include includes/header.pug
+    main
+      section.adm_productadd
+        .adm_productadd-box
+          h1.adm_productadd-title Adicionar novo produto
+          form.form
+            div.form-field
+              input#imgurl(type="url", placeholder=" ").form-fieldinput
+              label(for="imgurl").form-label URL da imagem
+            div.form-field
+              input#productcat(type="text", placeholder=" ").form-fieldinput
+              label(for="productcat").form-label Categoria
+            div.form-field
+              input#productname(type="text", placeholder=" ").form-fieldinput
+              label(for="productname").form-label Nome do produto
+            div.form-field
+              input#productprice(type="number", placeholder=" ").form-fieldinput
+              label(for="productprice").form-label Preço do produto
+            div.form-field
+              label(for="productdesc").form-label Descrição do produto
+              textarea#productdesc(cols="30", rows="4").form-fieldinput
+            button(type="submit").adm_productadd-button.button Adicionar produto
+    include includes/footer.pug

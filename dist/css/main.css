@@ -534,6 +534,13 @@ a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.adm_productadd-box {
+  max-width: 56rem;
+  margin-inline: auto;
+}
+.adm_productadd-button {
+  width: 100%;
+}
 .mainfooter {
   background-color: var(--color-bgalt);
   margin-top: clamp(3.2rem, 5vw, 6.4rem);

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="mainheader">
+      <nav class="mainnav"><a class="mainnav-logo" href="index.html"><img src="images/alurageek-logo.svg" alt="Logotipo AluraGeek"></a>
+        <label class="mainnav-searchicon" for="showsearch">busca</label>
+        <input class="mainnav-showsearch" id="showsearch" type="checkbox">
+        <form class="search">
+          <input class="search-fieldinput" id="search" type="search" placeholder="O que deseja encontrar?">
+          <button class="material-icons search-button" type="submit" aria-label="Busca">search</button>
+        </form><a class="mainnav-login button button_alt" href="login.html">Login</a>
+      </nav>
+    </header>
+    <main>
+      <section class="adm_productadd">
+        <div class="adm_productadd-box">
+          <h1 class="adm_productadd-title">Adicionar novo produto</h1>
+          <form class="form">
+            <div class="form-field">
+              <input class="form-fieldinput" id="imgurl" type="url" placeholder=" ">
+              <label class="form-label" for="imgurl">URL da imagem</label>
+            </div>
+            <div class="form-field">
+              <input class="form-fieldinput" id="productcat" type="text" placeholder=" ">
+              <label class="form-label" for="productcat">Categoria</label>
+            </div>
+            <div class="form-field">
+              <input class="form-fieldinput" id="productname" type="text" placeholder=" ">
+              <label class="form-label" for="productname">Nome do produto</label>
+            </div>
+            <div class="form-field">
+              <input class="form-fieldinput" id="productprice" type="number" placeholder=" ">
+              <label class="form-label" for="productprice">Preço do produto</label>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="productdesc">Descrição do produto</label>
+              <textarea class="form-fieldinput" id="productdesc" cols="30" rows="4"></textarea>
+            </div>
+            <button class="adm_productadd-button button" type="submit">Adicionar produto</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="mainfooter">
+      <div class="mainfooter-box">
+        <section class="about"><img class="about-logo" src="images/alurageek-logo.svg" alt="Logo AluraGeek">
+          <ul class="about-list">
+            <li class="about-item"> <a href="#">Quem somos nós</a></li>
+            <li class="about-item"> <a href="#">Política de privacidade</a></li>
+            <li class="about-item"> <a href="#">Programa fidelidade</a></li>
+            <li class="about-item"> <a href="#">Nossas lojas</a></li>
+            <li class="about-item"> <a href="#">Quero ser franqueado</a></li>
+            <li class="about-item"> <a href="#">Anuncie aqui</a></li>
+          </ul>
+        </section>
+        <section class="contact">
+          <h2 class="contact-title">Fale conosco</h2>
+          <form class="form">
+            <div class="contact-name form-field">
+              <input class="form-fieldinput" id="name" type="text" placeholder=" ">
+              <label class="contact-label form-label" for="name">Nome</label>
+            </div>
+            <div class="contact-msg form-field">
+              <label class="form-label" for="message">Escreva sua mensagem</label>
+              <textarea class="form-fieldinput" id="message" cols="30" rows="4"></textarea>
+            </div>
+            <button class="button" type="submit">Enviar mensagem</button>
+          </form>
+        </section>
+      </div>
+      <section class="copyright">
+        <p class="copyright-text">Desenvolvido por Jeff Ono <br> 2022</p>
+      </section>
+    </footer>
+  </body>
+</html>
